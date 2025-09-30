@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GNEXSHOP</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords" content="GNEXSHOP, PC repair, Laptop service, Diamond top-up, Cheesekut, Technology shop">
+    <meta name="description" content="GNEXSHOP provides expert PC and laptop repair services, in-game diamond top-ups, and homemade cheesekut dessert. Your one-stop tech & lifestyle hub.">
+
+
+    <!-- Favicons -->
+  <link href="assets/img/favicon123.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- vendor css file -->
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+<style>
+/* Style for the pulsating play button */
+.pulsating-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.pulsating-play-btn::before {
+    content: '▶';
+    font-size: 24px;
+    color: white;
+}
+
+.pulsating-play-btn:hover {
+    background: rgba(255, 0, 0, 0.9);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Pulsating animation */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+.pulsating-play-btn {
+    animation: pulse 2s infinite;
+}
+
+/* Style for the YouTube link */
+.youtube-link {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.youtube-link.show {
+    display: block;
+}
+</style>
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark py-2 d-none d-md-flex">
+        <div class="container">
+            <div class="d-flex justify-content-between topbar">
+                <div class="top-info">
+                    <small class="me-3 text-white-50"><i class="fas fa-phone-alt me-2 text-secondary"></i>+0147963531</small>
+                    <small class="me-3 text-white-50"><i class="fas fa-envelope me-2 text-secondary"></i>gnexshop@gmail.com</small>
+                </div>
+                <div id="note" class="text-secondary d-none d-xl-flex"><small>Order Now !!!!</small></div>
+                <div class="top-link">
+                    <a href="#" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-primary"></i></a>
+                    <a href="#" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-twitter text-primary"></i></a>
+                    <a href="#" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-instagram text-primary"></i></a>
+                    <a href="#" class="bg-light nav-fill btn btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-primary sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-dark navbar-expand-lg py-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="text-white fw-bold d-block">Gnex<span class="text-secondary">Shop</span></h1>
+            </a>
+            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+                <div class="navbar-nav ms-auto mx-xl-auto p-0">
+                    <a href="#home" class="nav-item nav-link active text-secondary">Home</a>
+                    <a href="#about" class="nav-item nav-link">About</a>
+                    <a href="#service" class="nav-item nav-link">Services</a>
+                    <a href="#team" class="nav-item nav-link">Our Team</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<script>
+    // Smooth scrolling and active link handling
+    document.querySelectorAll('.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active classes from all links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active', 'text-secondary');
+            });
+            
+            // Add active classes to the clicked link
+            this.classList.add('active', 'text-secondary');
+            
+            // Smooth scroll to the target section
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Optional: Update active link based on scroll position
+    window.addEventListener('scroll', function() {
+        const sections = ['home', 'about', 'service', 'team', 'contact'];
+        let currentSection = '';
+
+        sections.forEach(section => {
+            const element = document.querySelector(`#${section}`);
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    currentSection = section;
+                }
+            }
+        });
+
+        if (currentSection) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active', 'text-secondary');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active', 'text-secondary');
+                }
+            });
+        }
+    });
+</script>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div id="home" class="container-fluid px-0">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="img/carousel-1.jpg" class="img-fluid" alt="Welcome to GNEXSHOP">
+                    <div class="carousel-caption">
+                        <div class="container carousel-content">
+                            <h6 class="text-secondary h4 animated fadeInUp">We Provide Best Product And Service</h6>
+                            <h1 class="text-white display-1 mb-4 animated fadeInRight">WELCOME TO GNEXSHOP</h1>
+                            <p class="mb-4 text-white fs-5 animated fadeInDown">We provide PC & laptop repair services, in-game diamond top-ups, and homemade cheesekut dessert.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- ✅ Fixed closing tags -->
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Fact Start --> <div class="container-fluid bg-secondary py-5"> <div class="container"> <div class="row"> <div class="col-lg-3 wow fadeIn" data-wow-delay=".1s"> <div class="d-flex counter"> <h1 class="me-3 text-primary counter-value">99</h1> <h5 class="text-white mt-1">Success in getting happy customer</h5> </div> </div> <div class="col-lg-3 wow fadeIn" data-wow-delay=".3s"> <div class="d-flex counter"> <h1 class="me-3 text-primary counter-value">25</h1> <h5 class="text-white mt-1">Thousands of successful business</h5> </div> </div> <div class="col-lg-3 wow fadeIn" data-wow-delay=".5s"> <div class="d-flex counter"> <h1 class="me-3 text-primary counter-value">120</h1> <h5 class="text-white mt-1">Total clients who love Gnexshop</h5> </div> </div> <div class="col-lg-3 wow fadeIn" data-wow-delay=".7s"> <div class="d-flex counter"> <h1 class="me-3 text-primary counter-value">5</h1> <h5 class="text-white mt-1">Stars reviews given by satisfied clients</h5> </div> </div> </div> </div> </div> <!-- Fact End -->
+
+        <!-- About Section -->
+         </br>
+    <section id="about" class="about section">
+      <div id="about" class="container">
+        
+<div>
+        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                <h5 class="text-primary">About Us</h5>
+                <h1>Welcome to GNEXSHOP – your trusted hub for technology and lifestyle needs.</h1>
+            </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            
+            <img src="assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            <p>At GNEXSHOP, we specialize in PC and laptop repair services, ensuring your devices run smoothly with expert care and reliable solutions. Whether it’s hardware issues, software troubleshooting, or performance upgrades, our team is here to keep your tech in top shape.</p>
+            <p>But we’re more than just tech! We also offer in-game diamond top-ups for gamers and our crowd-favorite homemade cheesekut dessert – giving you the perfect mix of digital fun and sweet indulgence.</p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">Our mission is simple: to provide quality service, affordable solutions, and a unique shopping experience that combines technology with lifestyle.</p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Fix</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Play</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Enjoy</span></li>
+              </ul>
+              <div class="position-relative mt-4">
+                <video src="img/VIDEO-AI.mp4" class="img-fluid rounded-4" autoplay muted loop></video>
+                <a href="img/VIDEO-AI.mp4" class="glightbox pulsating-play-btn"></a>
+                <a href="img/VIDEO-AI.mp4" class="video-link">Watch Video</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /About Section -->
+    
+   
+
+
+   
+
+    <!-- Services Start -->
+    <div id="service" class="container-fluid services py-5 mb-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                <h5 class="text-primary">Our Services</h5>
+                <h1>We provide best service and product for our clients</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="img/project-1.jpg" class="img-fluid w-100 rounded" alt="Web Design Service">
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary">Web Design</h4>
+                                    <p class="m-0 text-white">Web Analysis</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="img/project-2.jpg" class="img-fluid w-100 rounded" alt="Cyber Security Service">
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary">Cyber Security</h4>
+                                    <p class="m-0 text-white">Cyber Security Core</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="img/project-3.jpg" class="img-fluid w-100 rounded" alt="Laptop & PC Repair">
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary">Laptop & PC Repair</h4>
+                                    <p class="m-0 text-white">Hardware & Software Solutions</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- ✅ Removed nested row -->
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Team Start -->
+<div id="team" class="container-fluid py-5 mb-5 team">
+    <div class="container">
+        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+            <h5 class="text-primary">Our Team</h5>
+            <h1>Meet Our Expert Team</h1>
+        </div>
+        <div class="owl-carousel team-carousel wow fadeIn" data-wow-delay=".5s">
+            
+            <!-- Team Member 1 -->
+            <div class="rounded team-item">
+                <div class="team-content">
+                    <div class="team-img-icon">
+                        <div class="team-img rounded-circle">
+                            <img src="img/team-7.jpg" class="img-fluid w-100 rounded-circle" alt="Ahmad – Founder & Technician">
+                        </div>
+                        <div class="team-name text-center py-3">
+                            <h4>Ahmad</h4>
+                            <p class="m-0">Founder & Technician</p>
+                        </div>
+                        <div class="team-icon d-flex justify-content-center pb-4">
+                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="rounded team-item">
+                <div class="team-content">
+                    <div class="team-img-icon">
+                        <div class="team-img rounded-circle">
+                            <img src="img/team-5.jpg" class="img-fluid w-100 rounded-circle" alt="Nadia – Customer Support">
+                        </div>
+                        <div class="team-name text-center py-3">
+                            <h4>Nadia</h4>
+                            <p class="m-0">Customer Support</p>
+                        </div>
+                        <div class="team-icon d-flex justify-content-center pb-4">
+                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="rounded team-item">
+                <div class="team-content">
+                    <div class="team-img-icon">
+                        <div class="team-img rounded-circle">
+                            <img src="img/team-4.jpg" class="img-fluid w-100 rounded-circle" alt="Hafiz – Sales & Marketing">
+                        </div>
+                        <div class="team-name text-center py-3">
+                            <h4>Hafiz</h4>
+                            <p class="m-0">Sales & Marketing</p>
+                        </div>
+                        <div class="team-icon d-flex justify-content-center pb-4">
+                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+<!-- Contact Start -->
+        <div id="contact" class="container-fluid py-5 mb-5">
+            <div class="container">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h5 class="text-primary">Get In Touch</h5>
+                    <h1 class="mb-3">Contact for any query</h1>
+                    <p class="mb-2">At GNEXSHOP, we are committed to delivering exceptional services tailored to your needs. Whether you need expert laptop repair to get your device running smoothly, fast and reliable in-game diamond top-ups to enhance your gaming experience, or a delicious homemade cheesekut dessert to satisfy your sweet cravings, we've got you covered. Reach out to us with any questions or to place your order today!.</p>
+                </div>
+                <div class="contact-detail position-relative p-5">
+                    <div class="row g-5 mb-5 justify-content-center">
+                        <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                            <div class="d-flex bg-light p-3 rounded">
+                                <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="text-primary">Address</h4>
+                                    <a href="https://maps.app.goo.gl/fBM8yxCba6hNLdRi8 target="_blank" class="h5">Institut Kemahiran MARA, Jalan Batu Tumboh Alor Lintang, Kampung Gong Badang, 22200 Besut, Terengganu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="d-flex bg-light p-3 rounded">
+                                <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                                    <i class="fa fa-phone text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="text-primary">Call Us</h4>
+                                    <a class="h5" href="tel:+0123456789" target="_blank">+014 7963531</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
+                            <div class="d-flex bg-light p-3 rounded">
+                                <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                                    <i class="fa fa-envelope text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="text-primary">Email Us</h4>
+                                    <a class="h5" href="mailto:info@example.com" target="_blank">gnexshop@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-5">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                            <div class="p-5 h-100 rounded contact-map">
+                                <iframe class="rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.643609563615!2d102.55643001744386!3d5.764317600000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b6ee240330f8e9%3A0x355a236f457e62c0!2sInstitut%20Kemahiran%20Mara%20Besut%2C%20Terengganu!5e0!3m2!1sen!2smy!4v1759192920163!5m2!1sen!2smy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="p-5 rounded contact-form">
+                                <div class="mb-4">
+                                    <input type="text" class="form-control border-0 py-3" placeholder="Your Name">
+                                </div>
+                                <div class="mb-4">
+                                    <input type="email" class="form-control border-0 py-3" placeholder="Your Email">
+                                </div>
+                                <div class="mb-4">
+                                    <input type="text" class="form-control border-0 py-3" placeholder="Project">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Message"></textarea>
+                                </div>
+                                <div class="text-start">
+                                    <button class="btn bg-primary text-white py-3 px-5" type="button">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
+        <div class="container pt-5 pb-4">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html">
+                        <h1 class="text-white fw-bold d-block">Gnex<span class="text-secondary">Shop</span></h1>
+                    </a>
+                    <p class="mt-4 text-light">Expert PC & laptop repair services, in-game diamond top-ups, and delicious homemade cheesekut – all in one place.</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-secondary">Contact Us</h3>
+                    <div class="text-white mt-4 d-flex flex-column contact-link">
+                        <span class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i> Besut, Terengganu, Malaysia</span>
+                        <span class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i> +0147963531</span>
+                        <span class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i> gnexshop@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="text-light mt-5 mb-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="text-light"><i class="fas fa-copyright text-secondary me-2"></i>GNEXSHOP, All rights reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="text-light">Designed By <a href="https://htmlcodex.com" class="text-secondary">HTML Codex</a> | Distributed By <a href="https://themewagon.com" class="text-secondary">ThemeWagon</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+<!-- Back to Top -->
+        <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- vendor jss file -->
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+
+
+
+</html>
